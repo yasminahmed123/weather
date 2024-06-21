@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark  p-0">
+        <div class="container-fluid bg-dark">
+        <div class="header p-4">
+            <img src="./css/IMAGE/logo.png" alt="" >
+            <div class="log-type">
+               <h1 class="log-header">weather</h1>
+               <small class="log-small">tagline goes here</small>
+            </div>
+        </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+              <li class="nav-item p-4">
+                <a class="nav-link " aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item p-4">
+                <a class="nav-link" href="#">news</a>
+              </li>
+              <li class="nav-item p-4">
+                <a class="nav-link" href="#">Live cameras
+                </a>
+              </li>
+              <li class="nav-item p-4">
+                <a class="nav-link" href="#">Photos</a>
+              </li>
+              <li class="nav-item p-4">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+        
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    <!-- cards -->
+     
+    <div class="banner py-5 ">
+        <div class="search mb-5">
+            <div class="container">
+                <div class="position-relative ">
+                    <input type="text" placeholder="find the location ..."id="searchLocation"
+                        class="searchBar form-control  rounded-bottom-pill rounded-top-pill p-2 border-0 bg-black text-white ">
+                    <button
+                        class="btn btn-info  position-absolute rounded-bottom-pill rounded-top-pill py-1 px-4 find-btn ">find</button>
+                </div>
+            </div>
+        </div>
+        
+    <div class="cards">
+        <div class="container ">
+            <div class="row align-items-center">
+                <!-- first day -->
+                <div class="col-md-4 ">
+                    <div class=" card  text-light rounded-4 mb-md-0  shadow py-4 px-3">
+                        <div class=" line-header d-flex justify-content-between align-items-center mb-3  ">
+                            <span id="TodayWeekDayMarkup"></span>
+                            <span id="DateToday"></span>
+                        </div>
+
+                        <div>
+                            <span id="CityToday"></span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="temp display-1 fw-bold d-block" id="TempToday"></span>
+                            <img src="" alt="" class="icon" id="imgToday">
+                        </div>
+                        <div>
+                            <span class="condition mt-2 text-primary" id="Todaycond"></span>
+                        </div>
+                        <div class="icons d-flex justify-content-between align-items-center mt-2 py-2">
+                            <div>
+                                <img src="./css/IMAGE/icon-umberella.png" alt="">
+                                <span id="humdityToday">20</span>
+                            </div>
+
+                            <div>
+                                <img src="./css/IMAGE/icon-wind.png" alt="">
+                                <span id="WindSpeedToday">20</span>
+                            </div>
+
+                            <div>
+                                <img src="./css/IMAGE/icon-compass.png" alt="">
+                                <span id="dirToday">east</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tomorrow -->
+                <div class="col-md-4 text-center">
+                    <div class=" card  text-light rounded-4 mb-md-0  shadow py-5">
+                        <div class="">
+                            <span id="tomorrowDay" class="line-header"></span>
+
+                        </div>
+                        <div class="py-5">
+                            <img src="" alt=""  id="iconTommorow">
+                            <span class="fs-4 fw-boldmd-block  mb-2" id="tMaxTemp"></span>
+                            <span class="d-block mb-2" id="MinTemp"></span>
+
+                        </div>
+                        <div>
+                            <span id="tCond" class="text-primary"></span>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- third day -->
+
+                <div class="col-md-4 text-center ">
+                    <div class=" card p-4 text-light rounded-4 mb-md0  shadow py-5 ">
+                        <div class="py-3">
+                            <span id="afterTomorow" class="line-header"></span>
+                        </div>
+                        <div class="py-4">
+                            <img src="" alt="" class="atIcon my-2" id="iconAfterTom" alt="">
+                            <span class="fs-4 fw-boldmd-block  mb-2" id="afterTomMaxTemp"></span>
+                            <span class="d-block mb-2" id="afterTomorrowMintemp"></span>
+
+                        </div>
+                        <div>
+                            <span id="afterTomCond" class="text-primary"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <div class="continer py-3">
+            <div class="row align-items-center py-4">
+                <div class="col-md-8">
+                    <form class="subscribe position-relative my-4">
+                        <input type="text" placeholder="Enter your email to subscribe... "
+                            class=" input-footer mx-5  w-100 rounded-bottom-pill rounded-top-pill p-3 border-0" />
+                        <button class="btn btn-info position-absolute rounded-bottom-pill rounded-top-pill  px-4 btn-footer text-white ">subscribe</button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <div class="social text-light d-flex justify-content-center ">
+                        <a href="#"><i class="fa-brands fa-facebook-f me-3 fs-4 fa-fw"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter me-3 fs-4 fa-fw"></i></a>
+                        <a href="#"><i class="fa-brands fa-google-plus-g me-3 fs-4 fa-fw"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest-p me-3 fs-4 fa-fw"></i></a>
+                    </div>
+                </div>
+                <div class="text-dark-emphasis  ">
+                    <span class="line-footer  m-5 ">Copyright 2014 Company name. Designed by Themezy. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
